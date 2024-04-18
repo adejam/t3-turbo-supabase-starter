@@ -1,0 +1,12 @@
+{
+  "extends": "@acme/tsconfig/base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "target": "ES2020",
+    "jsx": "preserve",
+    "module": "ES6",
+    "moduleResolution": "Bundler"
+  },
+  "include": ["src", "*.ts"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "@acme/tsconfig/internal-package.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "module": "ES2015",
+    "moduleResolution": "node"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

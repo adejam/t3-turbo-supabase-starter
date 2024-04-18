@@ -1,0 +1,12 @@
+{
+  "extends": "@acme/tsconfig/internal-package.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "target": "ES2020",
+    "module": "ES6",
+    "moduleResolution": "node"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
