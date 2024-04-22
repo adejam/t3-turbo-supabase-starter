@@ -1,4 +1,4 @@
-// @ts-expect-error expecting to use bundlrer
+// @ts-expect-error expecting to use bundler
 import { createEnv } from '@t3-oss/env-core'
 import { z } from 'zod'
 

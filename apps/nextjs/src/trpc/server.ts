@@ -12,23 +12,17 @@ import { createAnonServerClient } from './../../../../packages/auth/src/supabase
 const createContext = cache(async () => {
   const supabase = createAnonServerClient()
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
   const heads = new Headers(headers())
   heads.set('x-trpc-source', 'rsc')
 
   return createTRPCContext({
-    auth: user,
+    supabase,
     headers: heads,
   })
 })
 
 const createContextWithoutAuthAndHeader = cache(() => {
-  return createTRPCContext({
-    auth: null,
-  })
+  return createTRPCContext({})
 })
 
 const serverTrpc = createCaller(createContext)

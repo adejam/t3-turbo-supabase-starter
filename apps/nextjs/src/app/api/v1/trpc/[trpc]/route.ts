@@ -31,17 +31,13 @@ export const OPTIONS = () => {
 const handler = async (req: NextRequest) => {
   const supabase = createAnonServerClient()
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
   const response = await fetchRequestHandler({
     endpoint: getUrl(),
     router: appRouter,
     req,
     createContext: () =>
       createTRPCContext({
-        auth: user,
+        supabase,
         headers: req.headers,
       }),
     onError({ error, path }) {

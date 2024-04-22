@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 
-import { getUrl, TRPCReactProvider } from '~/trpc/react'
+import { TRPCReactProvider } from '~/trpc/react'
 import { cn } from './../../../../packages/ui/src'
 import { ThemeProvider, ThemeToggle } from './../../../../packages/ui/src/theme'
 import { Toaster } from './../../../../packages/ui/src/toast'
@@ -12,13 +12,13 @@ import '~/styles/globals.css'
 import { SEO_DESCRIPTION, SITE_NAME } from '~/constants'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(getUrl()),
+  // metadataBase: new URL(getUrl()),
   title: `${SITE_NAME}`,
   description: `${SEO_DESCRIPTION}`,
   openGraph: {
     title: `${SITE_NAME}`,
     description: `${SEO_DESCRIPTION}`,
-    url: getUrl(),
+    // url: getUrl(),
     siteName: `${SITE_NAME}`,
     locale: 'en_US',
     type: 'website',

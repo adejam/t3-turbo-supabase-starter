@@ -4,12 +4,16 @@
     "target": "es2015",
     "lib": ["es2022", "dom", "dom.iterable"],
     "moduleResolution": "node",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
     },
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
