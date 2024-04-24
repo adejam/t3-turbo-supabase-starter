@@ -4,4 +4,4 @@
 # Run branch check
 . "$(dirname -- "$0")/check-branch-name"
 
-pnpm install && pnpm build
+pnpm build
