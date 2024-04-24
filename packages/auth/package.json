@@ -15,6 +15,7 @@
     "clean": "rm -rf .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
+    "stylelint": "stylelint **/*.css --ignore-path ../../.gitignore",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -35,12 +36,28 @@
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
     "@acme/prettier-config": "workspace:*",
+    "@acme/stylelint-config": "workspace:*",
     "@acme/tsconfig": "workspace:*",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
     "eslint": "^9.0.0",
     "prettier": "^3.2.5",
+    "stylelint": "^16.3.1",
     "typescript": "^5.4.4"
+  },
+  "lint-staged": {
+    "!(*config).{js,jsx,ts,tsx,mjs,cjs}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md,yaml,yml,js,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "@acme/stylelint-config/base"
+    ]
   },
   "prettier": "@acme/prettier-config"
 }

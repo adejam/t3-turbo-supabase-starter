@@ -1,0 +1,10 @@
+{
+  "extends": "@acme/tsconfig/base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "module": "ES6",
+    "moduleResolution": "node"
+  },
+  "include": ["."],
+  "exclude": ["node_modules"]
+}

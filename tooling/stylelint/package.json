@@ -1,0 +1,32 @@
+{
+  "name": "@acme/stylelint-config",
+  "version": "0.3.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./base": "./base.js"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/prettier-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "@types/eslint": "^8.44.7",
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5",
+    "stylelint": "^16.3.1",
+    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-csstree-validator": "^3.0.0",
+    "stylelint-prettier": "^5.0.0",
+    "stylelint-scss": "^6.2.1",
+    "typescript": "^5.4.4"
+  },
+  "prettier": "@acme/prettier-config"
+}

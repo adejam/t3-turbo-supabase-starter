@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-import { createAnonServerClient } from '@acme/auth/src/supabase/lib/supabase-anon-server-client'
+import { createAnonServerClient } from '../../../../../../../../packages/auth/src/supabase/lib/supabase-anon-server-client'
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)

@@ -2,7 +2,7 @@ import type { EmailOtpType } from '@supabase/supabase-js'
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
-import { createAnonServerClient } from '@acme/auth/src/supabase/lib/supabase-anon-server-client'
+import { createAnonServerClient } from '../../../../../../../../packages/auth/src/supabase/lib/supabase-anon-server-client'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)

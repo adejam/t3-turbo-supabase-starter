@@ -29,5 +29,14 @@
     "prettier": "^3.2.5",
     "typescript": "^5.4.4"
   },
+  "lint-staged": {
+    "!(*config).{js,jsx,ts,tsx,mjs,cjs}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md,yaml,yml,js,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
   "prettier": "@acme/prettier-config"
 }

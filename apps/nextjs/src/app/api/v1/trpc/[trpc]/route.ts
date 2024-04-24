@@ -1,13 +1,12 @@
 import type { NextRequest } from 'next/server'
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
 
-import { createAnonServerClient } from '@acme/auth/src/supabase/lib/supabase-anon-server-client'
-
 import { getUrl } from '~/trpc/react'
 import {
   appRouter,
   createTRPCContext,
 } from '../../../../../../../../packages/api/src'
+import { createAnonServerClient } from '../../../../../../../../packages/auth/src/supabase/lib/supabase-anon-server-client'
 
 /**
  * Configure basic CORS headers
