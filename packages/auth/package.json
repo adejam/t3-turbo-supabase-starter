@@ -15,7 +15,6 @@
     "clean": "rm -rf .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
-    "stylelint": "stylelint **/*.css --ignore-path ../../.gitignore",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -52,11 +51,6 @@
     ],
     "*.{json,md,yaml,yml,js,ts,tsx}": [
       "prettier --write"
-    ]
-  },
-  "stylelint": {
-    "extends": [
-      "@acme/stylelint-config/base"
     ]
   },
   "prettier": "@acme/prettier-config"
